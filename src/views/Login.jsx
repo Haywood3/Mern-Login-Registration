@@ -18,7 +18,7 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post(`http://localhost:8000/api`, user, { withCredentials: true })
+        axios.post(`http://localhost:8000/api/getUser`, user, { withCredentials: true })
             .then(res => console.log(res.data))
             .catch(err => console.log(err.response))
     }
@@ -28,7 +28,7 @@ const Login = () => {
             <div>
                 <h1>LogIn</h1>
             </div>
-            <form action="POST" onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <div>
                     <label>Email</label>
                     <input type="text" name="email" value={user.email} onChange={handleChange} />

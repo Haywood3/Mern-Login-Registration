@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios'
 
 const UserInfo = () => {
-    const [firstName, setFirstName] = useState("")
+    const [firstName, setFirstName] = useState()
     const [id, setId] = useState()
     const [email, setEmail] = useState()
 
@@ -20,7 +20,6 @@ const UserInfo = () => {
     return (
         <div>
             <h3>Hello, {firstName} </h3>
-            <h3>You are logged in!!!</h3>
             <h3>Your Email: {email}</h3>
             <h3>Your Id: {id}</h3>
             <p>
