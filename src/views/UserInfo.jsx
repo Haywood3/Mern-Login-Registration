@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios'
 
 const UserInfo = () => {
-    const [firstName, setFirstName] = useState()
+    const [firstName, setFirstName] = useState("")
     const [id, setId] = useState()
     const [email, setEmail] = useState()
 
@@ -14,7 +14,7 @@ const UserInfo = () => {
                 setId(res.data._id)
                 setEmail(res.data.email)
             })
-            .catch()
+            .catch(err => console.log(err))
     }, [])
 
     return (
