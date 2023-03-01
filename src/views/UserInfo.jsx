@@ -17,6 +17,8 @@ const UserInfo = () => {
             .catch(err => console.log(err))
     }, [])
 
+
+
     return (
         <div>
             <h3>Hello, {firstName} </h3>

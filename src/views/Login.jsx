@@ -31,14 +31,14 @@ const Login = () => {
             <form onSubmit={handleSubmit}>
                 <div>
                     <label>Email</label>
-                    <input type="text" name="email" value={user.email} onChange={handleChange} />
+                    <input placeholder="email" type="text" name="email" value={user.email} onChange={handleChange} />
                 </div>
                 <div>
                     <label>Password</label>
-                    <input type="password" name="password" value={user.password} onChange={handleChange} />
+                    <input placeholder="password"type="password" name="password" value={user.password} onChange={handleChange} />
                 </div>
                 <div>
-                    <button type="submit" className="btn btn-primary">Login</button>
+                    <button type="submit" className="btn btn-primary" onClick={handleSubmit}>Login</button>
                 </div>
                 <div>
                     <div>Don't have an account? <Link to="/register">Register Here</Link></div>

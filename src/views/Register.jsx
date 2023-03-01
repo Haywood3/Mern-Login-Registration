@@ -13,10 +13,10 @@ const Register = () => {
 
     const handleChange = (e) => {
         let { name, value } = e.target
-            setUser({
-                ...user,
-                [name] : value
-            })
+        setUser({
+            ...user,
+            [name]: value
+        })
     }
 
     const handleSubmit = (e) => {
@@ -28,32 +28,30 @@ const Register = () => {
 
     return (
         <div>
-            <div>
-                <h1>Register</h1>
-            </div>
+            <h1>Register</h1>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label>First Name</label>
-                    <input type="text" name="firstName" value={user.firstName} onChange={handleChange} />
+                    <label>First Name </label>
+                    <input type="text" name="firstName" value={user.firstName} onChange={handleChange} placeholder="Min 2 characters" />
                 </div>
                 <div>
-                    <label>Last Name</label>
-                    <input type="text" name="lastName" value={user.lastName} onChange={handleChange} />
+                    <label>Last Name </label>
+                    <input type="text" name="lastName" value={user.lastName} onChange={handleChange} placeholder="Min 2 characters" />
                 </div>
                 <div>
-                    <label>Email</label>
-                    <input type="text" name="email" value={user.email} onChange={handleChange} />
+                    <label>Email </label>
+                    <input type="text" name="email" value={user.email} onChange={handleChange} placeholder="Please enter valid email" />
                 </div>
                 <div>
-                    <label>Password</label>
-                    <input type="password" name="password" value={user.password} onChange={handleChange} />
+                    <label>Password </label>
+                    <input type="password" name="password" value={user.password} onChange={handleChange} placeholder="Min 8 characters" />
                 </div>
                 <div>
-                    <label>Confirm Password</label>
-                    <input type="password" name="confirmPassword" value={user.confirmPassword} onChange={handleChange} />
+                    <label>Confirm Password </label>
+                    <input type="password" name="confirmPassword" value={user.confirmPassword} onChange={handleChange} placeholder="Passwords must match" />
                 </div>
                 <div>
-                    <button type="submit" className="btn btn-primary">Sign Up</button>
+                    <button type="submit" className="btn btn-primary" onClick={handleSubmit}>Sign Up</button>
                 </div>
                 <div>
                     <div>Already have an account? <Link to="/">Login Here</Link></div>
